@@ -29,13 +29,13 @@ Toda a instalação pode ser feita através da clonagem do projeto com a ferrame
 
 ## Mais Informações
 
-→ Foram utilziados layouts para implementação da view, visando o diminuimento da redundância no código, essas podem ser localizadas na pasta `views/layout/`.
+**→** Foram utilziados layouts para implementação da view, visando o diminuimento da redundância no código, essas podem ser localizadas na pasta `views/layout/`.
 
-→ Na aplicação foi implementada arquitetura MVC para fins de organização do projeto, dissociando a `view` das regras de negócio da aplicação.
+**→** Na aplicação foi implementada arquitetura MVC para fins de organização do projeto, dissociando a `view` das regras de negócio da aplicação.
 
 ### Exemplo da Aplicação de Rotas (**Model**)
 
-→ A organização de rotas foi feita de modo que cada conjunto de middleware responsável por uma página, capturando seus métodos POST ou GET, fossem implementados em um arquivo, assim outras páginas tem seu próprio arquivo de middlewares e suas responsabilidades. Abaixo separei o exemplo de arquivo dentre qual todos os middlewares pertencem as tarefas de administração:
+**→** A organização de rotas foi feita de modo que cada conjunto de middleware responsável por uma página, capturando seus métodos POST ou GET, fossem implementados em um arquivo, assim outras páginas tem seu próprio arquivo de middlewares e suas responsabilidades. Abaixo separei o exemplo de arquivo dentre qual todos os middlewares pertencem as tarefas de administração:
 
 ```javascript
 const path = require('path');
@@ -67,13 +67,13 @@ exports.products = products;
 
 ### Sobre a View (**View**)
 
-→ Visto que essa aplicação não utiliza nenhuma stack especifíca, para a criação de páginas dinâmicas, utilizei uma template engine mais conhecida como "jade" ou "pug" onde essa dinamização é feita através de placeholders, utilizando os dados processados pelo servidor. Sua sintaxe é bastante diferente do HTML tradicional, porém se apresenta de forma fácil, conta ainda com a possibilidade de implementar lógica de negócio na view, e sua estrutura de escopos é feita via identação.
+**→** Visto que essa aplicação não utiliza nenhuma stack especifíca, para a criação de páginas dinâmicas, utilizei uma template engine mais conhecida como "jade" ou "pug" onde essa dinamização é feita através de placeholders, utilizando os dados processados pelo servidor. Sua sintaxe é bastante diferente do HTML tradicional, porém se apresenta de forma fácil, conta ainda com a possibilidade de implementar lógica de negócio na view, e sua estrutura de escopos é feita via identação.
 
-→ Também foi utilizada a engine "ejs" para os mesmos fins, porém sua sintaxe é mais parecida com o HTML tradicional. Essa porém precisa de algumas implementações adicionais para que sejam criados layouts, o que já acontece de forma "natural" com a utilização do "pug".
+**→** Também foi utilizada a engine "ejs" para os mesmos fins, porém sua sintaxe é mais parecida com o HTML tradicional. Essa porém precisa de algumas implementações adicionais para que sejam criados layouts, o que já acontece de forma "natural" com a utilização do "pug".
 
 Abaixo um exemplo da implementação de uma página utilizando "pug" e o layout criado para evitar redundância de códigos:
 
-→ Layout
+**→** Layout
 
 ```javascript
 <!DOCTYPE html>
@@ -96,7 +96,7 @@ html(lang="en")
         block content
 ```
 
-→ Página de acesso (Shop)
+**→** Página de acesso (Shop)
 
 ```javascript
 extends layouts/main-layout.pug
